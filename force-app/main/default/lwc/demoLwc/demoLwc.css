@@ -1,0 +1,12 @@
+div{
+  background-color: white;
+}
+
+
+.frame {
+  border: 2px solid black;
+  padding: 25px;
+  background: url('https://picsum.photos/id/237/200/300');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
