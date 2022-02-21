@@ -2,17 +2,29 @@ import { LightningElement } from 'lwc';
 
 export default class DemoLwc extends LightningElement {
 
-    
-    
-    x=[10,20,30,40]
+    message='Good Morning';
+
+    student={
+        name : 'ABC',
+        age :23
+    }
+
+    courses=['Apex','LWC','Aura']
+
     handleClick(){
-        
-       let m= this.x.map(function(value){
-            return value*2
-        })
-        console.log(m)
+       
 
     }
    
+    get courseName(){
+        return this.courses[0]
+    }
     
+    handleChange(event){
+            console.log(event)
+            console.log(event.target)                
+            console.log(event.target.value)
+            
+    }
+
 }
