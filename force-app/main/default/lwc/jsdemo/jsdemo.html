@@ -1,7 +1,34 @@
 <template>
-    <lightning-card title="Java Script Demo" icon-name="standard:account">
-        <lightning-button variant="brand" label="Submit" onclick={handleClick}>
+    <lightning-card title="Data Binding" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+
+            First Name : {firstName}
+            Last Name : {lastName}
             
-        </lightning-button>
+
+
+            <lightning-input 
+                type="text" 
+                variant="standard" 
+                name="txtFirstName" 
+                onchange={handleChange}
+                label="Enter the First Name">
+            </lightning-input>
+
+            <lightning-input 
+                type="text" 
+                variant="standard" 
+                name="txtLastName" 
+                onchange={handleChange}
+                label="Enter the Last Name">
+            </lightning-input>
+
+
+
+            <lightning-button variant="brand" label="Submit" onclick={handleClick}>
+            </lightning-button>
+
+        </div>
+        
     </lightning-card>
 </template>

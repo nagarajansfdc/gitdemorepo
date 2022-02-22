@@ -1,26 +1,43 @@
 import { LightningElement } from 'lwc';
 
+
 export default class Jsdemo extends LightningElement {
 
-    //function to sum two numbers
-
-
-    sum(x,y)
-    {
-        return x+y;
-    }
    
-    handleClick(){
+    message='Welcome'
 
-        let result=this.sum(10,20);
+    firstName;
+    lastName;
+    counter=0;
+    mark;
 
-        console.log('sum='+result) 
+    student ={
+        name : 'John',
+        department : 'CS'
     }
     
+    courses=['Apex','LWc','Aura']
 
-    
-    
+    get courseName(){
+        return this.courses[this.counter];
+    }
 
-    
-    
+    handleClick(){
+        this.counter+=1;
+    }
+
+    handleChange(event){
+        
+        if(event.target.name=='txtFirstName')
+        {
+            this.firstName=event.target.value;
+           // this.mark=parseInt(event.target.value);
+        }
+        else if(event.target.name=='txtLastName')
+        {
+            this.lastName=event.target.value;
+        }
+
+    }
+
 }

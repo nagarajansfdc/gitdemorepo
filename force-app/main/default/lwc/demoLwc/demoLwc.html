@@ -2,11 +2,30 @@
 
     <lightning-card title="JS Demo" icon-name="standard:account">
         <div class="slds-m-around_medium">
-            Hello {message} <br/>
+            Hello ! {message} <br/>
             Courses Offered : {courseName} <br/>
-            Student Name: {student.name}
-        
-            <lightning-input type="text" variant="standard" label="Name" placeholder="type here..." onchange={handleChange}></lightning-input>
+            Student Name: {student.name}<br/>
+            First Name : {firstName}<br/>
+            Last Name : {lastName}<br/>
+
+            <lightning-input 
+                type="text" 
+                name="FName" 
+                variant="standard" 
+                label="Name" 
+                placeholder="type here..." 
+                onchange={handleChange}>
+            </lightning-input>
+
+        <lightning-input 
+            type="text" 
+            name="LName" 
+            variant="standard" 
+            label="Name" 
+            placeholder="type here..." 
+            onchange={handleChange}>
+        </lightning-input>
+
 
             <lightning-button variant="brand" label="Submit" onclick={handleClick}></lightning-button>
         </div>        
